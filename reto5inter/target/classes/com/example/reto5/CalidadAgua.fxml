@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="600.0" style="-fx-background-color: BAD8FF;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reto5.reto5Controller">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="400.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator orientation="VERTICAL" prefHeight="27.0" prefWidth="2.0" visible="false" />
+                  <Label text="Ingresar Datos" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="110.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Nombre">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="nombreText" promptText="Nombre">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="ID">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="idText" promptText="ID">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Municipio">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="municipioText" promptText="Municipio">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Tipo de Agua">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="tipoAguaText" promptText="Tipo de Agua">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Tipo de Cuerpo de Agua">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="tipoCuerpoText" promptText="Tipo Cuerpo de Agua">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Clasificación IRCA">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="ircaText" promptText="IRCA">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Cantidad de Habitantes">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="habitantesText" promptText="Habitantes">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox prefHeight="36.0" prefWidth="300.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#ingresarButton" text="Ingresar/Procesar">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label text="Historial Datos" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="210.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <VBox prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Resultados">
+                     <VBox.margin>
+                        <Insets left="120.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Clasificación IRCA C/U Cuerpo de Agua">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextArea fx:id="ircaCUExit" prefHeight="76.0" prefWidth="280.0">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <Label text="Número de Nivel de Riegos Medio o Inferior">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="numeroRiesgoExit">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Nombre de Nivel de Riegos Medio">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextArea fx:id="nombreRiesgoExit" prefHeight="0.0" prefWidth="280.0">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <Label text="Promedio de la Clasificacion IRCA">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="promedioIRCAExit">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Afectación 0-2 segun Número Habitantes">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextArea fx:id="afectacionExit" prefHeight="76.0" prefWidth="280.0">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <Label fx:id="alertaText">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="100.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </right>
+         <top>
+            <Label text="Lector nivel de la calidad del agua" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+         <bottom>
+            <TextArea fx:id="historialExit" prefHeight="111.0" prefWidth="580.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </BorderPane.margin>
+            </TextArea>
+         </bottom>
+      </BorderPane>
+      <Button mnemonicParsing="false" onAction="#salirButton" text="Salir" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

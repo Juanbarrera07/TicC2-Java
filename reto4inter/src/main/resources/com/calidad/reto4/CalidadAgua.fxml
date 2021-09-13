@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calidad.reto4.aguaController">
+   <children>
+      <AnchorPane prefHeight="46.0" prefWidth="600.0" style="-fx-background-color: #4190ba;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Separator prefWidth="50.0" visible="false" />
+                  <ImageView fitHeight="42.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/ingresar.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="6.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label blendMode="COLOR_BURN" onMouseClicked="#onIngresarButton" text="Ingresar">
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Stencil" size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="50.0" visible="false" />
+                  <ImageView fitHeight="42.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/procesar.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="7.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label blendMode="COLOR_BURN" onMouseClicked="#onProcesarButton" text="Procesar">
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Stencil" size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="50.0" visible="false" />
+                  <ImageView fitHeight="42.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/editar.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="6.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label blendMode="COLOR_BURN" onMouseClicked="#onEditElimButton" text="Editar/Eliminar">
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Stencil" size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="50.0" visible="false" />
+                  <ImageView fitHeight="42.0" fitWidth="30.0" onMouseClicked="#onExitButton" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets top="8.0" />
+                     </HBox.margin>
+                     <Image url="@images/apagar.png" />
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ingresarPanel" prefHeight="335.0" prefWidth="600.0" style="-fx-background-color: #4190ba;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <TextField fx:id="nombreText" blendMode="COLOR_BURN" layoutX="261.0" layoutY="55.0" promptText="Nombre" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="55.0" />
+            <TextField fx:id="idNum" blendMode="COLOR_BURN" layoutX="261.0" layoutY="95.0" promptText="ID" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="95.0" />
+            <TextField fx:id="municipioText" blendMode="COLOR_BURN" layoutX="261.0" layoutY="135.0" promptText="Municipio" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="135.0" />
+            <TextField fx:id="aguaText" blendMode="COLOR_BURN" layoutX="261.0" layoutY="175.0" promptText="Tipo de Agua" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="175.0" />
+            <TextField fx:id="cuerpoText" blendMode="COLOR_BURN" layoutX="261.0" layoutY="215.0" promptText="Tipo de Cuerpo de Agua" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="215.0" />
+            <TextField fx:id="ircaNum" blendMode="COLOR_BURN" layoutX="261.0" layoutY="255.0" promptText="IRCA" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="255.0" />
+            <Label blendMode="COLOR_BURN" layoutX="68.0" layoutY="60.0" text="Nombre :" AnchorPane.leftAnchor="55.0">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="68.0" layoutY="100.0" text="ID :" AnchorPane.leftAnchor="55.0">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="61.0" layoutY="140.0" text="Municipio :" AnchorPane.leftAnchor="55.0">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="86.0" layoutY="180.0" text="Tipo de Agua :" AnchorPane.leftAnchor="55.0">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="88.0" layoutY="220.0" text="Tipo de Cuerpo de Agua :" AnchorPane.leftAnchor="55.0">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="133.0" layoutY="260.0" text="IRCA :" AnchorPane.leftAnchor="55.0">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="115.0" layoutX="429.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/planeta.png" />
+               </image>
+            </ImageView>
+            <Button blendMode="MULTIPLY" layoutX="444.0" layoutY="215.0" mnemonicParsing="false" onMouseClicked="#ingresarButton" text="Ingresar">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Button>
+            <Label blendMode="COLOR_BURN" layoutX="243.0" layoutY="19.0" text="Ingresar Datos">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="28.0" layoutY="28.0" prefHeight="3.0" prefWidth="203.0" />
+            <Separator layoutX="368.0" layoutY="28.0" prefHeight="3.0" prefWidth="203.0" />
+            <Separator layoutX="25.0" layoutY="28.0" orientation="VERTICAL" prefHeight="278.0" prefWidth="0.0" />
+            <Separator layoutX="568.0" layoutY="214.0" orientation="VERTICAL" prefHeight="92.0" prefWidth="0.0" />
+            <Separator layoutX="444.0" layoutY="305.0" prefHeight="3.0" prefWidth="127.0" />
+            <Label fx:id="ingresarText" layoutX="440.0" layoutY="190.0" text=" " />
+         </children></AnchorPane>
+      <AnchorPane fx:id="procesarPanel" layoutX="200.0" layoutY="121.0" prefHeight="335.0" prefWidth="600.0" style="-fx-background-color: #4190ba;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label blendMode="COLOR_BURN" layoutX="243.0" layoutY="19.0" text="Procesar Datos">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="28.0" layoutY="28.0" prefHeight="3.0" prefWidth="203.0" />
+            <Separator layoutX="368.0" layoutY="28.0" prefHeight="3.0" prefWidth="203.0" />
+            <Separator layoutX="25.0" layoutY="28.0" orientation="VERTICAL" prefHeight="278.0" prefWidth="0.0" />
+            <Separator layoutX="568.0" layoutY="214.0" orientation="VERTICAL" prefHeight="92.0" prefWidth="0.0" />
+            <Separator layoutX="444.0" layoutY="305.0" prefHeight="3.0" prefWidth="127.0" />
+            <TextArea fx:id="resultadoExit" blendMode="COLOR_BURN" layoutX="405.0" layoutY="59.0" prefHeight="238.0" prefWidth="155.0" />
+            <Button blendMode="COLOR_BURN" layoutX="300.0" layoutY="97.0" mnemonicParsing="false" onMouseClicked="#obtenerButton" text="Obtener Datos" />
+            <Button blendMode="COLOR_BURN" layoutX="301.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#procesarButton" text="Procesar Datos" />
+            <Label blendMode="COLOR_BURN" layoutX="109.0" layoutY="41.0" text="Datos Entrada" underline="true">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="444.0" layoutY="41.0" text="Resultado" underline="true">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="datosEntradaExit" blendMode="COLOR_BURN" layoutX="37.0" layoutY="59.0" prefHeight="238.0" prefWidth="253.0" />
+            <ImageView fitHeight="65.0" fitWidth="149.0" layoutX="290.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/gota.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="obtenerText" layoutX="300.0" layoutY="280.0" text=" " />
+         </children></AnchorPane>
+      <AnchorPane fx:id="editelimPanel" layoutX="10.0" layoutY="10.0" prefHeight="335.0" prefWidth="600.0" style="-fx-background-color: #4190ba;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label blendMode="COLOR_BURN" layoutX="217.0" layoutY="19.0" text="Editar/Eliminar Datos">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="28.0" layoutY="28.0" prefHeight="3.0" prefWidth="178.0" />
+            <Separator layoutX="393.0" layoutY="28.0" prefHeight="3.0" prefWidth="178.0" />
+            <Separator layoutX="25.0" layoutY="28.0" orientation="VERTICAL" prefHeight="278.0" prefWidth="0.0" />
+            <Separator layoutX="568.0" layoutY="214.0" orientation="VERTICAL" prefHeight="92.0" prefWidth="0.0" />
+            <Separator layoutX="444.0" layoutY="305.0" prefHeight="3.0" prefWidth="127.0" />
+            <Label blendMode="COLOR_BURN" layoutX="195.0" layoutY="63.0" text="ID :">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="buscarText" blendMode="COLOR_BURN" layoutX="239.0" layoutY="59.0" prefHeight="25.0" prefWidth="78.0" promptText="ID a Buscar" />
+            <Button blendMode="MULTIPLY" layoutX="335.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#buscarButton" text="Buscar">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Button>
+            <Label blendMode="COLOR_BURN" layoutX="204.0" layoutY="102.0" text="Resultado de la Busqueda">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nombreEEText" blendMode="COLOR_BURN" layoutX="36.0" layoutY="151.0" prefHeight="25.0" prefWidth="150.0" promptText="Nombre" />
+            <Label blendMode="COLOR_BURN" layoutX="36.0" layoutY="131.0" text="Nombre :">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="215.0" layoutY="131.0" text="ID :">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="401.0" layoutY="131.0" text="Municipio :">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="36.0" layoutY="201.0" text="Tipo de Agua :">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="215.0" layoutY="201.0" text="Tipo Cuerpo de Agua :">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="401.0" layoutY="201.0" text="IRCA :">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idEENum" blendMode="COLOR_BURN" layoutX="215.0" layoutY="151.0" prefHeight="25.0" prefWidth="150.0" promptText="ID" />
+            <TextField fx:id="municipioEEText" blendMode="COLOR_BURN" layoutX="401.0" layoutY="151.0" prefHeight="25.0" prefWidth="150.0" promptText="Municipio" />
+            <TextField fx:id="aguaEEText" blendMode="COLOR_BURN" layoutX="36.0" layoutY="221.0" prefHeight="25.0" prefWidth="150.0" promptText="Tipo de agua" />
+            <TextField fx:id="cuerpoEEText" blendMode="COLOR_BURN" layoutX="215.0" layoutY="221.0" prefHeight="25.0" prefWidth="150.0" promptText="Tipo cuerpo de agua" />
+            <TextField fx:id="ircaEENum" blendMode="COLOR_BURN" layoutX="401.0" layoutY="221.0" prefHeight="25.0" prefWidth="150.0" promptText="IRCA" />
+            <ImageView fitHeight="118.0" fitWidth="120.0" layoutX="432.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/rios.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="118.0" fitWidth="120.0" layoutX="51.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/rios.png" />
+               </image>
+            </ImageView>
+            <Button blendMode="MULTIPLY" layoutX="296.0" layoutY="260.0" mnemonicParsing="false" onMouseClicked="#eliminarButton" text="Eliminar">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Button>
+            <Button blendMode="MULTIPLY" layoutX="208.0" layoutY="260.0" mnemonicParsing="false" onMouseClicked="#editarButton" text="Editar">
+               <font>
+                  <Font name="Stencil" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="editarText" layoutX="422.0" layoutY="266.0" text=" " />
+         </children></AnchorPane>
+      <ImageView fx:id="ingresarArrow" fitHeight="26.0" fitWidth="42.0" layoutX="95.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/arriba.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="procesarArrow" fitHeight="26.0" fitWidth="30.0" layoutX="243.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/arriba.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="editelimArrow" fitHeight="26.0" fitWidth="30.0" layoutX="418.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/arriba.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

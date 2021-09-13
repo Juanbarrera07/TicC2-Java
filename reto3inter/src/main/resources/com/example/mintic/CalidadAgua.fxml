@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mintic.controller">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="76.0" layoutY="40.0" text="Nombre" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="30.0" />
+            <Label layoutX="76.0" layoutY="85.0" text="ID" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="80.0" />
+            <Label layoutX="76.0" layoutY="130.0" text="Municipio" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="130.0" />
+            <Label layoutX="76.0" layoutY="175.0" text="Tipo de Agua" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="180.0" />
+            <Label layoutX="76.0" layoutY="220.0" text="Tipo de Cuerpo de agua" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="230.0" />
+            <Label layoutX="76.0" layoutY="265.0" text="IRCA" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="280.0" />
+            <TextField fx:id="nombreText" layoutX="76.0" layoutY="55.0" promptText="Nombre" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="50.0" />
+            <TextField fx:id="idNum" layoutX="76.0" layoutY="100.0" promptText="ID" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="100.0" />
+            <TextField fx:id="municipioText" layoutX="76.0" layoutY="145.0" promptText="Municipio" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="150.0" />
+            <TextField fx:id="tipoaguaText" layoutX="76.0" layoutY="190.0" promptText="Tipo de Agua" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="200.0" />
+            <TextField fx:id="tipocuerpoText" layoutX="76.0" layoutY="235.0" promptText="Tipo de Cuerpo de Agua" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="250.0" />
+            <TextField fx:id="ircaNum" layoutX="76.0" layoutY="280.0" promptText="IRCA" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="300.0" />
+            <Button layoutX="73.0" layoutY="330.0" mnemonicParsing="false" onAction="#ingresarButtonOnAction" text="Ingresar" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="150.0" />
+            <Button layoutX="163.0" layoutY="330.0" mnemonicParsing="false" onAction="#procesarButtonOnAction" text="procesar" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="200.0" />
+            <Label fx:id="contadorText" layoutX="191.0" layoutY="330.0" text="0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="335.0" />
+            <Label layoutX="77.0" layoutY="330.0" text="Numero de Datos Ingresado: #" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="335.0" />
+            <Label layoutX="60.0" layoutY="352.0" text="Estado Proceso :" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="355.0" />
+            <Label fx:id="estadoText" layoutX="220.0" layoutY="364.0" text="No Procesado" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="355.0" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="500.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="ingresadoExit" prefHeight="130.0" prefWidth="260.0" promptText="Datos Ingresados" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="50.0" />
+            <Label text="Datos Ingresados" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
+            <Label layoutX="35.0" layoutY="177.0" text="Resultados" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="190.0" />
+            <TextArea fx:id="resultadoExit" layoutX="20.0" layoutY="207.0" prefHeight="160.0" prefWidth="260.0" promptText="Resultado" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="210.0" />
+         </children>
+      </AnchorPane>
+   </right>
+   <bottom>
+      <AnchorPane BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
